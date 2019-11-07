@@ -22,7 +22,7 @@ requirements:
     host:
       - python
       - setuptools
-      - mkl-devel
+      - mkl-devel  {{ mkl }}
       - cython
     run:
       - python
