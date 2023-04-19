@@ -35,6 +35,7 @@ requirements:
 test:
     requires:
       - nose
+      - six
     imports:
       - mkl
     commands:
