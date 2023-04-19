@@ -31,7 +31,6 @@ requirements:
     run:
       - python
       - mkl
-      - six
 
 test:
     requires:
