@@ -1,5 +1,5 @@
 {% set version = "2.4.0" %}
-{% set buildnumber = 0 %}
+{% set buildnumber = 1 %}
 
 package:
     name: mkl-service
@@ -10,7 +10,7 @@ source:
     sha256: 7c515b7a1442c58b81c027fd13d188b28283df7c4d7df615e0c2f7618eb4a69c
 
 build:
-    skip: True  # [ppc64le]
+    skip: True  # [not ((win or linux or osx) and x86_64)]
     number: {{ buildnumber }}
     ignore_run_exports:
       - blas
