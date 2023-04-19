@@ -43,7 +43,7 @@ test:
       - tests
 
 about:
-    home: http://github.com/IntelPython/mkl-service
+    home: https://github.com/IntelPython/mkl-service
     license: BSD-3-Clause
     license_file: LICENSE.txt
     license_family: BSD
@@ -57,6 +57,8 @@ about:
             Conditional Numerical Reproducibility Control
             Miscellaneous
     summary: Python hooks for Intel(R) Math Kernel Library runtime control settings.
+    dev_url: https://github.com/IntelPython/mkl-service
+    doc_url: https://github.com/IntelPython/mkl-service
 
 extra:
   recipe-maintainers:
