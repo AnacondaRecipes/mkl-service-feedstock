@@ -12,7 +12,7 @@ source:
       - patches/0001-Conditional-mpich2.patch
 
 build:
-    skip: True  # [not ((win or linux or osx) and x86_64)]
+    skip: True  # [not x86]
     number: {{ buildnumber }}
     ignore_run_exports:
       - blas
