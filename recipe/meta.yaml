@@ -1,5 +1,5 @@
 {% set version = "2.4.0" %}
-{% set buildnumber = 1 %}
+{% set buildnumber = 2 %}
 
 package:
     name: mkl-service
@@ -33,15 +33,16 @@ requirements:
       - mkl
 
 test:
-    requires:
-      - nose
-      - six
+    # nose is incompatible with python 3.12
+    requires:               # [py<312]
+      - nose                # [py<312]
+      - six                 # [py<312]
     imports:
       - mkl
-    commands:
-      - nosetests -v tests
-    source_files:
-      - tests
+    commands:               # [py<312]
+      - nosetests -v tests  # [py<312]
+    source_files:           # [py<312]
+      - tests               # [py<312]
 
 about:
     home: https://github.com/IntelPython/mkl-service
