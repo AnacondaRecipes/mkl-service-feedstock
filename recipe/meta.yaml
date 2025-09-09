@@ -1,5 +1,4 @@
 {% set version = "2.5.2" %}
-{% set buildnumber = 0 %}
 
 package:
     name: mkl-service
@@ -13,7 +12,7 @@ source:
 
 build:
     skip: True  # [not x86 or osx]
-    number: {{ buildnumber }}
+    number: 0
     ignore_run_exports:
       - blas
       - mkl-service
