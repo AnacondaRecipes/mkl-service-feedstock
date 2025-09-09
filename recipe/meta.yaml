@@ -1,5 +1,5 @@
-{% set version = "2.4.0" %}
-{% set buildnumber = 3 %}
+{% set version = "2.5.2" %}
+{% set buildnumber = 0 %}
 
 package:
     name: mkl-service
@@ -7,7 +7,7 @@ package:
 
 source:
     url: https://github.com/IntelPython/mkl-service/archive/v{{ version }}.post0.tar.gz
-    sha256: 7c515b7a1442c58b81c027fd13d188b28283df7c4d7df615e0c2f7618eb4a69c
+    sha256: ee5506eb95ff1f4d67cd5f3e5b4648d752900dd10af8219f9b3857b306945a56
     patches:
       - patches/0001-Conditional-mpich2.patch
 
