@@ -15,6 +15,8 @@ build:
     - blas
     - mkl-service
   skip: true  # [osx]
+  skip: true  # [linux and aarch64]
+  skip: true  # [py<310 or py>314]
 
 requirements:
   build:
