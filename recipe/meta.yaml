@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/IntelPython/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  url: https://github.com/IntelPython/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
   sha256: 6dfd59d47dc68d5f89555ccf137dcc9a1154be3e2cef282fcdbc96399f0dc70c
 
 build:
