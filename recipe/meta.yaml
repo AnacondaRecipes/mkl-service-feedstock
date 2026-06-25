@@ -1,19 +1,22 @@
-{% set version = "2.5.2" %}
+{% set name = "mkl-service" %}
+{% set version = "2.7.2" %}
 
 package:
-  name: mkl-service
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://github.com/IntelPython/mkl-service/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: ee5506eb95ff1f4d67cd5f3e5b4648d752900dd10af8219f9b3857b306945a56
+  url: https://github.com/IntelPython/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 6dfd59d47dc68d5f89555ccf137dcc9a1154be3e2cef282fcdbc96399f0dc70c
 
 build:
-  skip: True  # [not x86 or osx]
   number: 0
   ignore_run_exports:
     - blas
     - mkl-service
+  skip: true  # [osx]
+  skip: true  # [linux and aarch64]
+  skip: true  # [py<310 or py>314]
 
 requirements:
   build:
@@ -21,22 +24,21 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
-    - setuptools
-    - mkl-devel {{ mkl }}
+    - wheel >=0.45.1
+    - setuptools >=77
     - cython
+    - mkl-devel {{ mkl }}
   run:
     - python
     - mkl
 
 test:
-  requires:
-    - pytest
   imports:
     - mkl
   commands:
     - pytest -vv --pyargs mkl
-  source_files:
-    - mkl/tests
+  requires:
+    - pytest
 
 about:
   home: https://github.com/IntelPython/mkl-service
