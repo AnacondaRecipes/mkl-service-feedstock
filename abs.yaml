@@ -12,6 +12,9 @@ upload_channels:
 
 channels:
   - ad-testing/label/py315
+  # cython py315 is on PR staging until review-gated promotion.
+  # Strip this staging URL before merge (U12).
+  - https://staging.continuum.io/pbp/fs/cython-feedstock/pr35/867291d
 
 build_env_vars:
   ANACONDA_ROCKET_GLIBC: "2.28"
