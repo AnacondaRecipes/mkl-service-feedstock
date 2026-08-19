@@ -16,6 +16,9 @@ build:
   ignore_run_exports:
     - blas
     - mkl-service
+    # py315 extensions use the Windows CRT directly.
+    - vc14_runtime  # [win]
+    - ucrt          # [win]
   skip: true  # [osx or (linux and aarch64) or py<315 or py>=316]
 
 requirements:
