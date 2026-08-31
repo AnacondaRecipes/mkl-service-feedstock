@@ -10,7 +10,7 @@ source:
   sha256: 6dfd59d47dc68d5f89555ccf137dcc9a1154be3e2cef282fcdbc96399f0dc70c
 
 build:
-  number: 0
+  number: 1
   ignore_run_exports:
     - blas
     - mkl-service
