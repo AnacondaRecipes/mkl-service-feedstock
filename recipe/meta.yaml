@@ -24,7 +24,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
-    - wheel >=0.45.1
+    - wheel 0.47.0 *_cp314t
     - setuptools >=77
     - cython
     - mkl-devel {{ mkl }}

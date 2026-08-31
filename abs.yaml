@@ -6,3 +6,4 @@ channels:
   - https://staging.continuum.io/pbp/fs/setuptools-feedstock/pr109/9b1e75c
   - https://staging.continuum.io/pbp/fs/cython-feedstock/pr36/9bdfa6a
   - https://staging.continuum.io/pbp/fs/wheel-feedstock/pr18/42eaeb2
+  - https://staging.continuum.io/pbp/fs/packaging-feedstock/pr26/ed52c28
