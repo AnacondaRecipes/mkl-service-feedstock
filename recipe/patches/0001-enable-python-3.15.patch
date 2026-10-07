@@ -1,0 +1,23 @@
+From 4ee9a0f3cf06664ef9374283429ff6b8e6b788dd Mon Sep 17 00:00:00 2001
+From: Serhii Kupriienko <skupriienko@anaconda.com>
+Date: Wed, 7 Oct 2026 15:21:51 +0000
+Subject: [PATCH] Allow Python 3.15 in requires-python
+
+Upstream 2.7.2 still declares requires-python >=3.10,<3.15. Widen the upper bound to <3.16 so the package can be built and installed against Python 3.15.
+---
+ pyproject.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index d238ba9..c48def6 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -63,7 +63,7 @@ keywords = ["MKL"]
+ license = "BSD-3-Clause"
+ name = "mkl-service"
+ readme = {file = "README.md", content-type = "text/markdown"}
+-requires-python = ">=3.10,<3.15"
++requires-python = ">=3.10,<3.16"
+ 
+ [project.optional-dependencies]
+ test = ["pytest"]
